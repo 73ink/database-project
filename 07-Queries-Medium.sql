@@ -27,7 +27,7 @@ INNER JOIN Passenger P
     ON B.PassengerID = P.PassengerID
 INNER JOIN Flight F
     ON B.FlightID = F.FlightID;
-GO
+
 
 
 -- 3. List all crew members assigned to flight 'SK101', showing their full name and role.
@@ -75,7 +75,7 @@ SELECT
     SUM(Price) AS TotalRevenue
 FROM Booking
 GROUP BY Class;
-GO
+
 
 
 -- 7. Count how many flights each aircraft has been assigned to.
@@ -101,7 +101,7 @@ INNER JOIN Booking B
     ON F.FlightID = B.FlightID
 GROUP BY F.FlightNumber
 HAVING COUNT(B.BookingID) > 1;
-GO
+
 
 
 -- 9. Show the full details of all bookings: passenger name, flight number, origin airport, destination airport, class, and price paid.
